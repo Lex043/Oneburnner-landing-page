@@ -13,12 +13,27 @@ body {
 nav {
   display: flex;
   width: 100%;
+  flex-wrap: nowrap;
   padding: 10px 20px 10px 20px;
 }
 
+nav figure {
+  padding-right: 10px;
+  width: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.hamburger {
+  display: none;
+}
+
+.hamburger__mark {
+  display: none;
+}
+
 .icon {
-  height: auto;
-  width: 100px;
+  max-width: 100%;
 }
 
 .links {
@@ -58,6 +73,50 @@ nav {
   padding-left: 6px;
 }
 
+@media screen and (max-width: 600px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: unset;
+  }
+
+  nav figure {
+    flex: 1;
+  }
+
+  .icon {
+    max-width: 50%;
+  }
+
+  .links {
+    gap: 15px;
+    display: none;
+    flex-direction: column;
+  }
+
+  .left__side,
+  .right__side {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .left__side li a,
+  .right__side li a {
+    font-size: 14px;
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: center;
+  }
+
+  .hamburger__mark {
+    display: none;
+    align-items: center;
+  }
+}
+
 /* section 1 */
 .intro {
   display: flex;
@@ -87,11 +146,32 @@ nav {
   border: none;
   border-radius: 100px;
   padding: 7px 15px 7px 15px;
-  font-size: 8px;
+  font-size: 11px;
+}
+
+.intro figure {
+  width: 400px;
 }
 
 .intro img {
-  width: 400px;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .intro {
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 20px;
+  }
+
+  .intro figure {
+    width: 350px;
+    padding-left: 10px;
+  }
+
+  .intro header {
+    text-align: center;
+  }
 }
 
 .caption {
@@ -101,13 +181,21 @@ nav {
   padding-top: 50px;
   font-family: "Roboto", sans-serif;
 }
+
 .partners {
   padding-right: 60px;
   padding-left: 60px;
 }
 
 .partners img {
-  width: 100%;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .partners {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
 }
 
 /* section 2 */
@@ -141,11 +229,24 @@ nav {
   font-family: "Roboto", sans-serif;
 }
 
+@media screen and (max-width: 600px) {
+  .dept__list {
+    padding-right: 8px;
+    padding-left: 12px;
+  }
+
+  .dept__list ul {
+    padding-right: 2px;
+    text-align: center;
+  }
+}
+
 .manage__team {
   display: flex;
   align-items: center;
-  gap: 300px;
-  padding-top: 100px;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 50px;
   padding-left: 50px;
 }
 
@@ -167,8 +268,27 @@ nav {
 }
 
 .manage__team img {
-  width: 390px;
+  width: 200px;
   object-fit: contain;
+}
+
+@media screen and (max-width: 600px) {
+  .manage__team {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-left: 8px;
+  }
+
+  .manage__team h1 {
+    text-align: center;
+    width: 100%;
+  }
+
+  .manage__team img {
+    max-width: 100%;
+  }
 }
 
 /* section 3 */
@@ -177,8 +297,9 @@ nav {
 .automated__task {
   display: flex;
   align-items: center;
-  gap: 300px;
-  padding-left: 80px;
+  gap: 20px;
+  justify-content: space-between;
+  padding-left: 50px;
   padding-right: 50px;
   padding-top: 80px;
 }
@@ -204,7 +325,7 @@ nav {
 
 .team__up img,
 .automated__task img {
-  width: 400px;
+  width: 200px;
 }
 
 .integrate {
@@ -225,15 +346,46 @@ nav {
   height: auto;
 }
 
+@media screen and (max-width: 600px) {
+  .team__up,
+  .automated__task {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 10px;
+    gap: 20px;
+    padding-top: 26px;
+  }
+
+  .team__up header {
+    order: -1;
+  }
+
+  .team__up img,
+  .automated__task img {
+    width: 200px;
+  }
+
+  .integrate {
+    font-size: 15px;
+  }
+
+  .social__media {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+  }
+}
+
 /* section 4 */
 
 .timeless__report {
   padding-top: 100px;
-  padding-left: 100px;
-  padding-right: 60px;
+  padding-left: 50px;
+  padding-right: 50px;
   display: flex;
   align-items: center;
-  gap: 150px;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .timeless__report h1,
@@ -256,15 +408,17 @@ nav {
 .timeless__report img,
 .efficient img,
 .customer__support img {
-  width: 400px;
+  width: 200px;
 }
 
 .efficient {
   display: flex;
   align-items: center;
-  gap: 200px;
+  justify-content: space-between;
+  gap: 20px;
   padding-top: 100px;
-  padding-left: 150px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .efficient p {
@@ -276,9 +430,11 @@ nav {
 .customer__support {
   display: flex;
   align-items: center;
-  gap: 150px;
+  justify-content: space-between;
+  gap: 20px;
   padding-top: 100px;
-  padding-left: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
   padding-bottom: 80px;
 }
 
@@ -297,6 +453,7 @@ nav {
   font-family: "Roboto", sans-serif;
   padding-top: 60px;
   padding-bottom: 50px;
+  width: 100%;
 }
 
 .better__way h1 {
@@ -322,6 +479,50 @@ nav {
 
 .better__way button i {
   padding-left: 6px;
+}
+
+@media screen and (max-width: 600px) {
+  .timeless__report,
+  .efficient,
+  .customer__support {
+    flex-direction: column;
+  }
+
+  .timeless__report,
+  .efficient,
+  .customer__support {
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 20px;
+    gap: 20px;
+  }
+
+  .timeless__report header,
+  .customer__support header {
+    order: -1;
+  }
+
+  .timeless__report h1,
+  .efficient h1,
+  .customer__support h1 {
+    text-align: center;
+  }
+
+  .timeless__report p,
+  .efficient p,
+  .customer__support p {
+    width: 100%;
+  }
+
+  .timeless__report img,
+  .efficient img,
+  .customer__support img {
+    max-width: 100%;
+  }
+
+  .efficient h1 {
+    padding-bottom: 5px;
+  }
 }
 
 /* footer */
@@ -361,6 +562,7 @@ nav {
   padding-left: 20px;
   display: grid;
   grid-template-columns: 500px 150px 150px 200px 200px;
+  /*  */
 }
 
 .address h1 {
@@ -427,3 +629,27 @@ nav {
   padding-bottom: 5px;
   padding-left: 20px;
 }
+
+@media screen and (max-width: 600px) {
+  .footer_second_aspect {
+    padding-left: 20px;
+    grid-template-columns: 150px 150px;
+  }
+  .product h1,
+  .company h1,
+  .oneburner h1,
+  .resources h1,
+  .address h1 {
+    padding-top: 15px;
+  }
+
+  .last_aspect {
+    padding-top: 20px;
+  }
+}
+
+/* @media screen and (min-width: 800px) {
+  .footer_second_aspect {
+    grid-template-columns: 300px 250px 150px;
+  }
+} */
