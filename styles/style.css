@@ -121,9 +121,9 @@ nav figure {
 .intro {
   display: flex;
   justify-content: space-between;
-  width: 90%;
+  width: 100%;
   align-items: center;
-  padding-left: 60px;
+  padding-left: 80px;
 }
 
 .intro h1 {
@@ -149,12 +149,12 @@ nav figure {
   font-size: 11px;
 }
 
-.intro figure {
-  width: 400px;
-}
+/* .intro figure {
+  
+} */
 
 .intro img {
-  max-width: 100%;
+  width: 400px;
 }
 
 @media screen and (max-width: 600px) {
@@ -165,8 +165,11 @@ nav figure {
   }
 
   .intro figure {
-    width: 350px;
     padding-left: 10px;
+  }
+
+  .intro img {
+    max-width: 100%;
   }
 
   .intro header {
@@ -247,7 +250,7 @@ nav figure {
   justify-content: space-between;
   gap: 20px;
   padding-top: 50px;
-  padding-left: 50px;
+  padding-left: 70px;
 }
 
 .manage__team h1 {
@@ -268,8 +271,8 @@ nav figure {
 }
 
 .manage__team img {
-  width: 200px;
-  object-fit: contain;
+  width: 300px;
+  /* object-fit: contain; */
 }
 
 @media screen and (max-width: 600px) {
@@ -299,7 +302,7 @@ nav figure {
   align-items: center;
   gap: 20px;
   justify-content: space-between;
-  padding-left: 50px;
+  padding-left: 100px;
   padding-right: 50px;
   padding-top: 80px;
 }
@@ -325,7 +328,7 @@ nav figure {
 
 .team__up img,
 .automated__task img {
-  width: 200px;
+  width: 300px;
 }
 
 .integrate {
@@ -337,7 +340,7 @@ nav figure {
 }
 
 .social__media {
-  padding-left: 50px;
+  padding-left: 100px;
   padding-right: 50px;
 }
 
@@ -362,7 +365,7 @@ nav figure {
 
   .team__up img,
   .automated__task img {
-    width: 200px;
+    max-width: 100%;
   }
 
   .integrate {
@@ -380,8 +383,8 @@ nav figure {
 
 .timeless__report {
   padding-top: 100px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 100px;
+  padding-right: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -408,7 +411,7 @@ nav figure {
 .timeless__report img,
 .efficient img,
 .customer__support img {
-  width: 200px;
+  width: 300px;
 }
 
 .efficient {
@@ -417,7 +420,7 @@ nav figure {
   justify-content: space-between;
   gap: 20px;
   padding-top: 100px;
-  padding-left: 50px;
+  padding-left: 100px;
   padding-right: 50px;
 }
 
@@ -433,8 +436,8 @@ nav figure {
   justify-content: space-between;
   gap: 20px;
   padding-top: 100px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 100px;
+  padding-right: 40px;
   padding-bottom: 80px;
 }
 
@@ -529,8 +532,8 @@ nav figure {
 
 .first__aspect {
   padding-top: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -559,10 +562,17 @@ nav figure {
 
 .footer_second_aspect {
   padding-top: 20px;
-  padding-left: 20px;
-  display: grid;
-  grid-template-columns: 500px 150px 150px 200px 200px;
-  /*  */
+  padding-left: 50px;
+  padding-right: 20px;
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+.address {
+  /* flex-basis: 500px; */
+  width: 40%;
 }
 
 .address h1 {
@@ -631,10 +641,6 @@ nav figure {
 }
 
 @media screen and (max-width: 600px) {
-  .footer_second_aspect {
-    padding-left: 20px;
-    grid-template-columns: 150px 150px;
-  }
   .product h1,
   .company h1,
   .oneburner h1,
@@ -647,9 +653,3 @@ nav figure {
     padding-top: 20px;
   }
 }
-
-/* @media screen and (min-width: 800px) {
-  .footer_second_aspect {
-    grid-template-columns: 300px 250px 150px;
-  }
-} */
