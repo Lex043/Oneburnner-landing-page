@@ -128,7 +128,7 @@ nav figure {
 
 .intro h1 {
   color: #462686;
-  width: 300px;
+  max-width: 300px;
   padding-bottom: 15px;
   font-family: "Roboto", sans-serif;
 }
@@ -136,7 +136,7 @@ nav figure {
 .intro p {
   padding-bottom: 12px;
   font-size: 12px;
-  width: 300px;
+  max-width: 300px;
   font-family: "Roboto", sans-serif;
 }
 
@@ -170,6 +170,8 @@ nav figure {
 
   .intro img {
     max-width: 100%;
+    overflow: hidden;
+    object-fit: cover;
   }
 
   .intro header {
@@ -192,6 +194,8 @@ nav figure {
 
 .partners img {
   max-width: 100%;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 600px) {
@@ -260,7 +264,7 @@ nav figure {
 }
 
 .manage__team p {
-  width: 300px;
+  max-width: 300px;
   font-size: 12px;
 }
 
@@ -272,7 +276,8 @@ nav figure {
 
 .manage__team img {
   width: 300px;
-  /* object-fit: contain; */
+  overflow: hidden;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 600px) {
@@ -291,6 +296,8 @@ nav figure {
 
   .manage__team img {
     max-width: 100%;
+    overflow: hidden;
+    object-fit: cover;
   }
 }
 
@@ -316,7 +323,7 @@ nav figure {
 .team__up p,
 .automated__task p {
   font-size: 12px;
-  width: 300px;
+  max-width: 300px;
 }
 
 .team__up h1,
@@ -329,6 +336,8 @@ nav figure {
 .team__up img,
 .automated__task img {
   width: 300px;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .integrate {
@@ -346,7 +355,8 @@ nav figure {
 
 .social__media img {
   max-width: 100%;
-  height: auto;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 600px) {
@@ -366,6 +376,8 @@ nav figure {
   .team__up img,
   .automated__task img {
     max-width: 100%;
+    overflow: hidden;
+    object-fit: cover;
   }
 
   .integrate {
@@ -403,7 +415,7 @@ nav figure {
 
 .timeless__report p {
   font-size: 14px;
-  width: 400px;
+  max-width: 400px;
   padding-top: 12px;
   color: #454545cc;
 }
@@ -412,6 +424,8 @@ nav figure {
 .efficient img,
 .customer__support img {
   width: 300px;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .efficient {
@@ -426,14 +440,14 @@ nav figure {
 
 .efficient p {
   font-size: 12px;
-  width: 400px;
+  max-width: 400px;
   color: #454545cc;
 }
 
 .customer__support {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   gap: 20px;
   padding-top: 100px;
   padding-left: 100px;
@@ -446,7 +460,7 @@ nav figure {
   font-weight: 400;
   font-size: 12px;
   color: #454545cc;
-  width: 420px;
+  max-width: 420px;
 }
 
 .better__way {
